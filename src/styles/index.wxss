@@ -1,0 +1,27 @@
+@import "./basic/normalize.wxss";
+@import "./layout.wxss";
+@import "./icons.wxss";
+@import "./button.wxss";
+@import "./components.wxss";
+@import "./utils.wxss";
+
+page {
+  height: 100%;
+  max-width: 100%;
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  color: #222;
+}
+
+page:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1rpx solid #E6E6E6;
+}

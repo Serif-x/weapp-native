@@ -1,0 +1,125 @@
+.place-container:before, .place-container:after {
+  content: " ";
+  display: table;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.place-container:after {
+  clear: both;
+}
+
+.place-content {
+  height: 100%;
+}
+
+.place-holder {
+  height: 100%;
+  width: 100%;
+  min-height: 200rpx;
+  /* base64: images/lazy.svg */
+  background: url(#) no-repeat scroll center center;
+  background-size: contain;
+}
+
+.lazy {
+  background: no-repeat scroll center center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
+.lazy.error {
+  opacity: 1;
+  background-image: url(#);
+}
+
+.lazy-img__placeholder {
+  /* base64: images/lazy.svg */
+  background: url(#) no-repeat scroll center center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  min-height: 200rpx;
+}
+
+.navbar__area {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.navbar__view {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+}
+
+.navbar__box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  /*overflow: hidden;*/
+}
+
+.navbar__item {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15rpx 15rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar__item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 20rpx;
+  margin-top: -10rpx;
+  border-left: 1rpx solid #e6e6e6;
+}
+
+.navbar__item:first-child:before {
+  content: none;
+}
+
+.navbar__link {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 20rpx 0;
+  line-height: 1;
+  font-size: 28rpx;
+  background-color: transparent;
+  border-radius: 0;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: visible;
+}
+
+.navbar__link:after {
+  content: none;
+}
